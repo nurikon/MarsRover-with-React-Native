@@ -49,7 +49,7 @@ const App = () => {
 
     for (var i = 0; i < directives.length; i++) {
       if (directives[i] === 'L' || directives[i] === 'R' || directives[i] === 'M') {
-        if (x > sizeX - 1 || y > sizeY - 1 || x < 1 || y < 1) {
+        if (x > sizeX || y > sizeY || x < 0 || y < 0) {
           Alert.alert('', 'you came out of the plateau!', [{ text: 'OK' }]);
           break;
         } else {
